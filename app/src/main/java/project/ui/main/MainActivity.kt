@@ -365,22 +365,6 @@ class MainActivity :
     }
 
 
-    @Suppress("SameParameterValue")
-    private fun changeTabsFont(tabLayout: TabLayout, fontName: String) {
-        val vg = tabLayout.getChildAt(0) as ViewGroup
-        val tabsCount = vg.childCount
-        for (j in 0 until tabsCount) {
-            val vgTab = vg.getChildAt(j) as ViewGroup
-            val tabChildCount = vgTab.childCount
-            for (i in 0 until tabChildCount) {
-                val tabViewChild = vgTab.getChildAt(i)
-                if (tabViewChild is TextView) {
-                    CalligraphyUtils.applyFontToTextView(tabLayout.context, tabViewChild, fontName)
-                }
-            }
-        }
-    }
-
 
     @Subscribe
     fun event(event: EventAr) {
