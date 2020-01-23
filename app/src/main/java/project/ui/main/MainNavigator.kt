@@ -7,7 +7,8 @@ interface MainNavigator {
     fun openARActivity()
     fun openLuckyActivity()
     fun openProfileActivity()
+    fun openDetailActivity()
+    fun openSupportActivity()
 
-    fun toggleFabMode()
 
 }

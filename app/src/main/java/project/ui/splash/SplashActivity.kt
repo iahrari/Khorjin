@@ -11,7 +11,6 @@ import ir.sinapp.sarnakh.BR
 import ir.sinapp.sarnakh.databinding.ActivitySplashBinding
 import project.ui.base.BaseActivity
 import project.ui.intro.IntroActivity
-import project.ui.login.LoginActivity
 import project.ui.main.MainActivity
 import project.utils.Bungee
 import project.utils.launchActivity

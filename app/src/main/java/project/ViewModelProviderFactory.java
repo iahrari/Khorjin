@@ -10,8 +10,8 @@ import javax.inject.Singleton;
 
 import project.data.DataManager;
 import project.ui.ar.ARViewModel;
+import project.ui.detail.DetailViewModel;
 import project.ui.intro.IntroViewModel;
-import project.ui.login.LoginViewModel;
 import project.ui.lucky.LuckyViewModel;
 import project.ui.main.MainViewModel;
 import project.ui.main.best.BestViewModel;
@@ -25,6 +25,10 @@ import project.ui.mission.MissionViewModel;
 import project.ui.osm.OsmViewModel;
 import project.ui.profile.ProfileViewModel;
 import project.ui.splash.SplashViewModel;
+import project.ui.support.SupportViewModel;
+import project.ui.support.configuration.ConfigurationViewModel;
+import project.ui.support.payment.PaymentViewModel;
+import project.ui.support.shipping.ShippingViewModel;
 import project.utils.rx.SchedulerProvider;
 
 
@@ -74,8 +78,16 @@ public class ViewModelProviderFactory implements ViewModelProvider.Factory {
             return (T) new MissionViewModel(dataManager, schedulerProvider);
         } else if (modelClass.isAssignableFrom(ShoppingListViewModel.class)) {
             return (T) new ShoppingListViewModel(dataManager, schedulerProvider);
-        } else if (modelClass.isAssignableFrom(LoginViewModel.class)) {
-            return (T) new LoginViewModel(dataManager, schedulerProvider);
+        } else if (modelClass.isAssignableFrom(SupportViewModel.class)) {
+            return (T) new SupportViewModel(dataManager, schedulerProvider);
+        } else if (modelClass.isAssignableFrom(DetailViewModel.class)) {
+            return (T) new DetailViewModel(dataManager, schedulerProvider);
+        } else if (modelClass.isAssignableFrom(ConfigurationViewModel.class)) {
+            return (T) new ConfigurationViewModel(dataManager, schedulerProvider);
+        } else if (modelClass.isAssignableFrom(ShippingViewModel.class)) {
+            return (T) new ShippingViewModel(dataManager, schedulerProvider);
+        } else if (modelClass.isAssignableFrom(PaymentViewModel.class)) {
+            return (T) new PaymentViewModel(dataManager, schedulerProvider);
         }
 
 

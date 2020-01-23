@@ -73,6 +73,8 @@
     <string name="zereshk">زرشک</string>
     <string name="anab">عناب</string>
     <string name="honny">عسل</string>
+    <string name="Learn_AR">آموزش با AR</string>
+
 
     <string name="ms">پرفروش ترین کالا ها</string>
     <string name="sale_in_month">بر اساس میزان فروش در ماه</string>
@@ -83,16 +85,29 @@
     <string name="mahsol4">عناب فله</string>
     <string name="gh1">9000 تومان</string>
 
-    <string name="main_title_project">عنوان پروژه:</string>
-    <string name="main_about_project">کشت ده هکتار عناب</string>
+    <string name="main_title_project">عنوان طرح:</string>
+    <string name="main_about_project">کاشت ده هکتار عناب</string>
+    <string name="main_about_project2">کاشت ده هکتار عناب</string>
+    <string name="main_about_project3">مکانیزه سازی برداشت زرشک</string>
+    <string name="main_about_project4">قطره ای کردن آبیاری زمین</string>
+    <string name="main_about_project5">کاشت ده هکتار عناب</string>
+
+
 
     <string name="best_farmer">بهترین کشاورزان</string>
     <string name="rate_farmer">بر اساس امتیاز کسب شده</string>
 
-    <string name="farmer1">غُلُمرضا قاسمی</string>
-    <string name="farmer2">حسی الله رسانی</string>
-    <string name="farmer3">سجی احمدی</string>
+    <string name="farmer1">غُلُم رضا قاسمی</string>
+    <string name="farmer4">حُسِ الله رسانی</string>
+    <string name="farmer5">سِجا احمدی</string>
+    <string name="farmer2">مَسِ رَمِضُ </string>
+    <string name="farmer3">غُلُمسِی محمدی</string>
+    <string name="farmer6">غُلُم کَلوخ</string>
 
     <string name="ok">حمایت میکنم</string>
+    <string name="total">قیمت نهایی</string>
+    <string name="checkout">پرداخت</string>
+
+
 
 </resources>

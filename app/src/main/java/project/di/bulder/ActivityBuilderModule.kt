@@ -6,10 +6,10 @@ import dagger.Module
 import dagger.android.ContributesAndroidInjector
 import project.ui.ar.ARActivity
 import project.ui.ar.ARActivityModule
+import project.ui.detail.DetailActivity
+import project.ui.detail.DetailActivityModule
 import project.ui.intro.IntroActivity
 import project.ui.intro.IntroActivityModule
-import project.ui.login.LoginActivity
-import project.ui.login.LoginActivityModule
 import project.ui.lucky.LuckyActivity
 import project.ui.lucky.LuckyActivityModule
 import project.ui.main.MainActivity
@@ -32,6 +32,11 @@ import project.ui.profile.ProfileActivity
 import project.ui.profile.ProfileActivityModule
 import project.ui.splash.SplashActivity
 import project.ui.splash.SplashActivityModule
+import project.ui.support.SupportActivity
+import project.ui.support.SupportActivityModule
+import project.ui.support.configuration.ConfigurationFragmentProvider
+import project.ui.support.payment.PaymentFragmentProvider
+import project.ui.support.shipping.ShippingFragmentProvider
 import project.utils.notify.MessagingService
 import project.utils.notify.ServiceModule
 
@@ -48,9 +53,6 @@ abstract class ActivityBuilderModule {
             (NotificationFragmentProvider::class)]
     )
     abstract fun bindMain(): MainActivity
-
-    @ContributesAndroidInjector(modules = [(LoginActivityModule::class)])
-    abstract fun bindLogin(): LoginActivity
 
     @ContributesAndroidInjector(modules = [(SplashActivityModule::class)])
     abstract fun bindSplash(): SplashActivity
@@ -80,6 +82,19 @@ abstract class ActivityBuilderModule {
 
     @ContributesAndroidInjector(modules = [(MissionActivityModule::class)])
     abstract fun bindMission(): MissionActivity
+
+
+    @ContributesAndroidInjector(
+        modules = [(SupportActivityModule::class),
+            (ConfigurationFragmentProvider::class),
+            (ShippingFragmentProvider::class),
+            (PaymentFragmentProvider::class)]
+    )
+    abstract fun bindSupport(): SupportActivity
+
+
+    @ContributesAndroidInjector(modules = [(DetailActivityModule::class)])
+    abstract fun bindDetail(): DetailActivity
 
 
 //    @ContributesAndroidInjector(modules = [(&{activityName}ActivityModule::class)])

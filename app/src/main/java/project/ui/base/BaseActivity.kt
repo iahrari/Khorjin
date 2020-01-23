@@ -24,7 +24,6 @@ import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import project.App
 import project.Session
-import project.ui.login.LoginActivity
 import project.utils.*
 import project.utils.localization.LocalizationActivityDelegate
 import project.utils.network.NetworkStatusDisplayer
@@ -138,13 +137,8 @@ abstract class BaseActivity<T : ViewDataBinding, V : BaseViewModel<*>>(private v
     }
 
 
-    @Suppress("UNUSED_PARAMETER")
     @Subscribe
     fun openActivityOnTokenExpire(logoutEvent: App.LogoutEvent) {
-        if (logoutEvent.flag) viewModel.logout(true)
-        launchActivity<LoginActivity> { }
-        Bungee.swipeLeft(this)
-        finish()
     }
 
 

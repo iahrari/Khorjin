@@ -6,7 +6,12 @@ import android.view.View
 import com.jakewharton.rxbinding3.view.clicks
 import ir.sinapp.sarnakh.BR
 import ir.sinapp.sarnakh.databinding.FragmentSettingBinding
+import org.greenrobot.eventbus.EventBus
+import project.ui.base.BaseActivity
 import project.ui.base.BaseFragment
+import project.utils.EventLang
+import project.utils.EventProfile
+import project.utils.LocationUtils
 import javax.inject.Inject
 
 
@@ -21,9 +26,18 @@ class SettingFragment : BaseFragment<FragmentSettingBinding, SettingViewModel>(F
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel += binding.txt.clicks().subscribe {
-            viewModel.logout()
+        viewModel.country = LocationUtils.getUserCountry(activity)
+        viewModel.setLang((activity as BaseActivity<*,*>).currentLanguage.language)
+
+
+        viewModel += binding.buttonEn.clicks().subscribe {
+            EventBus.getDefault().post(EventLang("en"))
         }
+
+        viewModel += binding.buttonFa.clicks().subscribe {
+            EventBus.getDefault().post(EventLang("fa"))
+        }
+
 
     }
 

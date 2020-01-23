@@ -1,5 +1,6 @@
 package project.ui.main.setting
 
+import androidx.databinding.ObservableInt
 import androidx.lifecycle.SavedStateHandle
 import com.squareup.inject.assisted.Assisted
 import com.squareup.inject.assisted.AssistedInject
@@ -11,6 +12,15 @@ class SettingViewModel ( dataManager: DataManager, schedulerProvider: SchedulerP
     : BaseViewModel<SettingNavigator>( dataManager, schedulerProvider) {
 
     //
+    var country: String? = null
+    val language = ObservableInt(-1)
+
+    fun setLang(language: String) {
+        if (language == "fa")
+            this.language.set(0)
+        else if (language == "en")
+            this.language.set(1)
+    }
 
 }
 

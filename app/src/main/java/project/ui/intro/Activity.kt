@@ -12,7 +12,6 @@ import ir.sinapp.sarnakh.R
 import ir.sinapp.sarnakh.databinding.ActivityIntroBinding
 import kotlinx.android.synthetic.main.activity_splash.*
 import project.ui.base.BaseActivity
-import project.ui.login.LoginActivity
 import project.ui.main.MainActivity
 import project.utils.Bungee
 import project.utils.extension.addOnPageChangeListener
@@ -55,21 +54,11 @@ class IntroActivity :
             openMainActivity()
         }
 
-        viewModel += binding.account.clicks().subscribe {
-            openLoginActivity()
-        }
     }
 
     override fun openMainActivity() {
         viewModel.doNotShowAgain()
         launchActivity<MainActivity> {}
-        Bungee.fade(this)
-        finish()
-    }
-
-    override fun openLoginActivity() {
-        viewModel.doNotShowAgain()
-        launchActivity<LoginActivity> {}
         Bungee.fade(this)
         finish()
     }

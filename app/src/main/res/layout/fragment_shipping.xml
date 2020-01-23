@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="project.ui.support.shipping.ShippingViewModel" />
+
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_large">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="جزييات کاربري"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="@color/grey_40"
+                app:fontFamily="sans-serif-medium" />
+
+            <EditText
+                style="@style/EditText.Flat.Grey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:background="@drawable/edit_text_round_bg_outline"
+                android:hint="نام و نام خانوادگي"
+                android:minHeight="@dimen/spacing_xmlarge"
+                android:text="" />
+
+            <EditText
+                style="@style/EditText.Flat.Grey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_middle"
+                android:background="@drawable/edit_text_round_bg_outline"
+                android:hint="ايميل"
+                android:minHeight="@dimen/spacing_xmlarge"
+                />
+
+            <EditText
+                style="@style/EditText.Flat.Grey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_middle"
+                android:background="@drawable/edit_text_round_bg_outline"
+                android:hint="شماره تماس"
+                android:minHeight="@dimen/spacing_xmlarge"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:text="اطلاعات مربوط به آدرس"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="@color/grey_40"
+                app:fontFamily="sans-serif-medium" />
+
+            <EditText
+                style="@style/EditText.Flat.Grey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:background="@drawable/edit_text_round_bg_outline"
+                android:hint="آدرس"
+                android:minHeight="@dimen/spacing_xmlarge"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_middle"
+                android:orientation="horizontal">
+
+                <EditText
+                    style="@style/EditText.Flat.Grey"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_round_bg_outline"
+                    android:hint="کشور"
+                    android:text="United State"
+                    android:drawableEnd="@drawable/ic_expand_arrow"
+                    android:drawableRight="@drawable/ic_expand_arrow"
+                    android:minHeight="@dimen/spacing_xmlarge" />
+
+                <View
+                    android:layout_width="@dimen/spacing_middle"
+                    android:layout_height="0dp" />
+
+                <EditText
+                    style="@style/EditText.Flat.Grey"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_round_bg_outline"
+                    android:hint="کدپستي"
+                    android:minHeight="@dimen/spacing_xmlarge" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

@@ -20,7 +20,7 @@ import javax.inject.Inject
 
 
 class HomeFragment :
-    BaseFragment<FragmentHomeBinding, HomeViewModel>(FragmentHomeBinding::class.java) {
+    BaseFragment<FragmentHomeBinding, HomeViewModel>(FragmentHomeBinding::class.java), HomeNavigator {
 
     override val bindingVariable: Int
         get() = BR.viewModel
@@ -43,16 +43,11 @@ class HomeFragment :
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        viewModel.navigator = this
 
         Slider.init(GlideImageLoadingService(baseActivity))
-        val list = listOf(
-            "https://workshop.hostiran.net/file/2018/07/01-2.png",
-            "https://banner-design.ir/wp-content/uploads/POST.jpg",
-            "https://banner-design.ir/wp-content/uploads/nowruz-post-offer.jpg",
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8dVYL-1SYWM9-XC-z0bEso6zEhqVVM0_1DZmHHuuTVWiy7Bmk",
-            "https://banner-design.ir/wp-content/uploads/eid-post-blog-fetr96.jpg)"
-        )
-        binding.slider.setAdapter(DetailSliderAdapter(list))
+
+        binding.slider.setAdapter(DetailSliderAdapter(viewModel.list))
 
         viewModel += binding.lytMap.clicks().subscribe {
             EventBus.getDefault().post(EventMap())
@@ -110,20 +105,22 @@ class HomeFragment :
         binding.badge1.text = drawable.toSpannable()
         binding.badge2.text = drawable2.toSpannable()
         binding.badge3.text = drawable3.toSpannable()
+        binding.badge4.text = drawable.toSpannable()
+        binding.badge5.text = drawable2.toSpannable()
+        binding.badge6.text = drawable3.toSpannable()
 
+    }
 
-        viewModel += binding.lytFarmer1.clicks().subscribe {
-            EventBus.getDefault().post(EventProfile())
-        }
-        viewModel += binding.lytFarmer2.clicks().subscribe {
-            EventBus.getDefault().post(EventProfile())
-        }
-        viewModel += binding.lytFarmer3.clicks().subscribe {
-            EventBus.getDefault().post(EventProfile())
-        }
+    override fun openSupport() {
+        EventBus.getDefault().post(EventSupport())
+    }
 
+    override fun openProfile() {
+        EventBus.getDefault().post(EventProfile())
+    }
 
-
+    override fun openDetail() {
+        EventBus.getDefault().post(EventDetail())
     }
 
 }

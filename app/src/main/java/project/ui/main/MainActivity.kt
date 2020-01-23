@@ -28,6 +28,7 @@ import kotlinx.coroutines.runBlocking
 import org.greenrobot.eventbus.Subscribe
 import project.ui.ar.ARActivity
 import project.ui.base.BaseActivity
+import project.ui.detail.DetailActivity
 import project.ui.lucky.LuckyActivity
 import project.ui.main.best.BestFragment
 import project.ui.main.help.HelpFragment
@@ -37,6 +38,7 @@ import project.ui.main.setting.SettingFragment
 import project.ui.main.shoppingList.ShoppingListFragment
 import project.ui.map.MapActivity
 import project.ui.profile.ProfileActivity
+import project.ui.support.SupportActivity
 import project.utils.*
 import project.utils.navDrawer.MyDrawerItem
 import javax.inject.Inject
@@ -71,6 +73,8 @@ class MainActivity :
         super.onCreate(savedInstanceState)
 
         viewModel.navigator = this
+        currentLanguage
+
 
         showFragment(getString(R.string.home), 1)
 
@@ -82,22 +86,25 @@ class MainActivity :
         setUp()
 
 
-        initNotify()
+        init()
 
 
     }
 
+    private fun init() {
 
-    private fun initNotify() {
+        val firstName = "سجاد"
+        val lastName = "احمدی"
+        val username = "sajjad.ahmadi.sh@gmail.com"
+        val gender = true
 
-        FirebaseInstanceId.getInstance().instanceId.addOnCompleteListener { task ->
-            if (task.isSuccessful) {
-                viewModel.registerNotify(task.result!!.token)
-            }
-        }
-
+        itemProfile.withName("$firstName $lastName")
+        itemProfile.withEmail(username)
+        itemProfile.withIcon(if (gender) R.drawable.ic_user_man else R.drawable.ic_user_woman)
+        headerResult.updateProfile(itemProfile)
 
     }
+
 
     private fun setUpText() {
 
@@ -138,20 +145,6 @@ class MainActivity :
             .addProfiles(itemProfile)
             .build()
 
-
-        viewModel.updateHeader { firstName, lastName, username, gender ->
-            Crashlytics.setUserIdentifier(username)
-            Crashlytics.setUserName("$firstName $lastName")
-
-            Crashlytics.setUserIdentifier(username)
-            itemProfile.withName("$firstName $lastName")
-            itemProfile.withEmail(username)
-            itemProfile.withIcon(if (gender) R.drawable.ic_user_man else R.drawable.ic_user_woman)
-            headerResult.updateProfile(itemProfile)
-
-        }.subscribe()
-
-
         val font = CommonUtils.typefaceFromAsset("fonts/IRANYekanMobileBold.ttf", this)
 
 
@@ -167,7 +160,7 @@ class MainActivity :
         val itemBest = MyDrawerItem()
             .withSelected(false)
             .withIconTintingEnabled(true)
-            .withName(R.string.best)
+            .withName(R.string.best_farmer)
             .withIcon(R.drawable.ic_calendar)
             .withTypeface(font)
             .withTextColorRes(R.color.grey_800)
@@ -176,6 +169,14 @@ class MainActivity :
             .withSelected(false)
             .withIconTintingEnabled(true)
             .withName(R.string.shopping_list)
+            .withIcon(R.drawable.ic_shopping_basket)
+            .withTypeface(font)
+            .withTextColorRes(R.color.grey_800)
+
+        val itemLearnAR = MyDrawerItem()
+            .withSelected(false)
+            .withIconTintingEnabled(true)
+            .withName(R.string.Learn_AR)
             .withIcon(R.drawable.ic_shopping_basket)
             .withTypeface(font)
             .withTextColorRes(R.color.grey_800)
@@ -235,6 +236,7 @@ class MainActivity :
             .addDrawerItems(
                 itemHome,
                 itemShoppingList,
+                itemLearnAR,
                 itemBest,
                 notificationItem,
                 DividerDrawerItem().withSelectable(false),
@@ -265,21 +267,6 @@ class MainActivity :
 
 
     private fun setUp() {
-
-        ViewAnimation.initShowOut(binding.lytCreate)
-        ViewAnimation.initShowOut(binding.lytJoin)
-        binding.backDrop.visibility().accept(false)
-
-
-        viewModel += binding.backDrop.clicks().subscribe {
-            toggleFabMode()
-        }
-
-
-        viewModel += binding.fabAdd.clicks().subscribe {
-            toggleFabMode()
-        }
-
 
 
         mPagerAdapter.count = 2
@@ -339,36 +326,15 @@ class MainActivity :
     private var flag = false
 
 
-    override fun toggleFabMode() {
-
-        if (flag)
-            return
-
-        rotate = binding.fabAdd.rotateFab(!rotate)
-        flag = true
-        if (rotate) {
-            binding.backDrop.isEnabled = true
-            ViewAnimation.fadeIn(binding.backDrop) {
-                flag = false
-            }
-            ViewAnimation.showIn(binding.lytCreate)
-            ViewAnimation.showIn(binding.lytJoin)
-        } else {
-            binding.backDrop.isEnabled = false
-            ViewAnimation.fadeOut(binding.backDrop) {
-                back_drop.visibility = View.GONE
-                flag = false
-            }
-            ViewAnimation.showOut(binding.lytCreate)
-            ViewAnimation.showOut(binding.lytJoin)
-        }
-    }
-
-
 
     @Subscribe
     fun event(event: EventAr) {
         openARActivity()
+    }
+
+    @Subscribe
+    fun event(event: EventLang) {
+        setLanguage(event.l, this)
     }
 
 
@@ -399,10 +365,31 @@ class MainActivity :
         Bungee.fade(this)
     }
 
+    override fun openDetailActivity() {
+        launchActivity<DetailActivity> {}
+        Bungee.fade(this)
+    }
+
+    override fun openSupportActivity() {
+        launchActivity<SupportActivity> {}
+        Bungee.fade(this)
+    }
+
 
     @Subscribe
     fun event(event: EventMap) {
         openMapActivity()
+    }
+
+
+    @Subscribe
+    fun event(event: EventDetail) {
+        openDetailActivity()
+    }
+
+    @Subscribe
+    fun event(event: EventSupport) {
+        openSupportActivity()
     }
 
     override fun openMapActivity() {
@@ -413,7 +400,6 @@ class MainActivity :
     override fun onBackPressed() {
         when {
             drawer.isDrawerOpen -> drawer.closeDrawer()
-            rotate -> toggleFabMode()
             viewModel.tab.get() != 1 -> drawer.setSelectionAtPosition(1)
             else -> super.onBackPressed()
         }

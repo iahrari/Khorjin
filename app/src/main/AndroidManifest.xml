@@ -31,11 +31,12 @@
                 android:name="org.apache.http.legacy"
                 android:required="false" />
 
-        <activity
-                android:name="project.ui.login.LoginActivity"
-                android:windowSoftInputMode="adjustResize" />
-
         <activity android:name="project.ui.main.MainActivity" >
+
+
+        </activity>
+
+        <activity android:name="project.ui.splash.SplashActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -43,10 +44,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
-
-        </activity>
-
-        <activity android:name="project.ui.splash.SplashActivity">
 
             <meta-data android:name="android.app.shortcuts"
                 android:resource="@xml/shortcuts" />
@@ -61,6 +58,8 @@
         <activity android:name="project.ui.mission.MissionActivity" />
 
         <activity android:name="project.ui.profile.ProfileActivity" />
+        <activity android:name="project.ui.detail.DetailActivity" />
+        <activity android:name="project.ui.support.SupportActivity" />
 
 
         <service android:name="project.utils.notify.MessagingService">

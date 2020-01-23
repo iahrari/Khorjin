@@ -68,6 +68,7 @@
     <string name="home">Home</string>
     <string name="best">B‌est</string>
     <string name="shopping_list">Shopping List</string>
+    <string name="Learn_AR">Learn with AR</string>
 
     <string name="ar_api_key" translatable="false">L5o+LiuJJjIz6K0Gs0pqgSNT8E0Jwl56H9AWVR+oCAUruA4YH7UZVVD5BRgZqAgeBLoBGwuzHxIZugMeKrwAFgO3QxQFtk9bSLYMBB6+HzwPoiQTSOFcW0i3BBQPtR4SGflXLBH5DwIEvwESI78eVVCATx4Y9R4eBLodB0SoDAUEugYfSPdPVTf3TwELqQQWBK8eVVCATxULqAQUSIZBVRq3DAMMtB8aGflXLEisBBkOtBoESPdPGgu4TypG+QgPGrIfEj6yABI5rwwaGvlXGR+3AVtIsh47BbgMG0jhCxYGqAgKRqBPFR+1CRsPkgkESOE2VQOpQwQDtQwHGvUeFhi1DBwC+TBbSK0MBQO6AwMZ+VcsSLkMBAO4TypG+R0bC68LGBi2HlVQgE8WBL8fGAO/TypG+QgPGrIfEj6yABI5rwwaGvlXGR+3AVtIsh47BbgMG0jhCxYGqAgKRqBPFR+1CRsPkgkESOE2VUiGQVUcuh8eC7UZBEjhNlUIuh4eCfkwW0irARYevQIFB6hPTTH5BBgZ+TBbSL4VBwOpCCMDtggkHroAB0jhAwIGt0FVA6ghGAm6AVVQvQwbGb4QKhfu/E4S2vqO5jwVhCBf+AnT1fRIEp4OaIHE3jlOrWgDWfYDDebQKGGa40G40UBVTfHLZiVHL4rj9AjtKU6W4S0IgcWLvN6bvGBHZKpCtHDoFAv9/wz4+Cyorh4cDrPUl3E0SzPn5Q5QiNuDco0GJtL81booXbZTAUBtz9k0d+3F6cEQ3zJuWhvrrQ9xtNtyi7fG9V/sU4KZi+HpaakSUSszt46VfoG6Si8W5h+RmGrZpaQbCD9y69QIdyS1K+rCJdACNVjiC3KR/s+4gT8vvL7iYW68tTVX9JUNf5EvtCeT8g+bGMzAa7rybfvIY4/yjAnVZ9UdIZsShEFnf1Vq2213</string>
     <string name="play">PLAY</string>
@@ -89,18 +90,28 @@
     <string name="mahsol4">عناب فله</string>
     <string name="gh1">9000 تومان</string>
 
-    <string name="main_title_project">Title project :</string>
     <string name="main_about_project">Agriculture ten hectares of jujube</string>
+    <string name="main_about_project2">Agriculture ten hectares of jujube2</string>
+    <string name="main_about_project3">Agriculture ten hectares of jujube3</string>
+    <string name="main_about_project4">Agriculture ten hectares of jujube4</string>
+    <string name="main_about_project5">Agriculture ten hectares of jujube5</string>
 
-
-    <string name="best_farmer">best_farmers</string>
+    <string name="best_farmer">Best farmers</string>
     <string name="rate_farmer">Based on rate of farmers</string>
 
     <string name="farmer1">Golom-Reza Ghasemi </string>
     <string name="farmer2">Hossein Allahresani</string>
     <string name="farmer3">Sajjad Ahmadi</string>
+    <string name="farmer4">Ma Se Mohammadi </string>
+    <string name="farmer5">Pesar Mammad</string>
+    <string name="farmer6">Gholom Kalokh</string>
+
+
+    <string name="main_title_project">عنوان پروژه:</string>
+
+
     <string name="ok">حمایت میکنم</string>
-    <string name="middle_lorem_ipsum">aaaa</string>
-    <string name="medium_lorem_ipsum">mle</string>
+    <string name="total">Total Amount</string>
+    <string name="checkout">CHECKOUT</string>
 
 </resources>

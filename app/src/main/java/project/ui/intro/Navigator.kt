@@ -4,6 +4,5 @@ interface IntroNavigator {
 
 
     fun openMainActivity()
-    fun openLoginActivity()
 
 }
