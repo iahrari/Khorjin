@@ -21,7 +21,8 @@ import javax.inject.Inject
 class HomeFragment :
     BaseFragment<FragmentHomeBinding, HomeViewModel>(FragmentHomeBinding::class.java) {
 
-    override val bindingVariable: Int get() = BR.viewModel
+    override val bindingVariable: Int
+        get() = BR.viewModel
 
     @Inject
     override lateinit var viewModel: HomeViewModel
