@@ -2,18 +2,19 @@ package project.ui.main.home
 
 
 import android.os.Bundle
+import android.text.SpannableString
+import android.text.TextUtils
 import android.view.View
+import cn.nekocode.badge.BadgeDrawable
 import com.jakewharton.rxbinding3.view.clicks
 import ir.sinapp.sarnakh.BR
 import ir.sinapp.sarnakh.databinding.FragmentHomeBinding
-import kotlinx.android.synthetic.main.fragment_home.*
 import org.greenrobot.eventbus.EventBus
 import project.adapter.DetailSliderAdapter
 import project.ui.base.BaseFragment
-import project.utils.EventAr
-import project.utils.EventMap
-import project.utils.EventWheel
-import project.utils.GlideImageLoadingService
+import project.utils.*
+import project.utils.widget.toolbar.Dp
+import project.utils.widget.toolbar.Px
 import ss.com.bannerslider.Slider
 import javax.inject.Inject
 
@@ -26,7 +27,6 @@ class HomeFragment :
 
     @Inject
     override lateinit var viewModel: HomeViewModel
-
 
 
     companion object {
@@ -61,6 +61,67 @@ class HomeFragment :
         viewModel += binding.lytWheel.clicks().subscribe {
             EventBus.getDefault().post(EventWheel())
         }
+
+        val font = CommonUtils.typefaceFromAsset("fonts/IRANYekanMobileBold.ttf", context!!)
+
+        val drawable = BadgeDrawable.Builder()
+            .type(BadgeDrawable.TYPE_WITH_TWO_TEXT_COMPLEMENTARY)
+            .text1("45%")
+            .text2("حمایت شده")
+            .typeFace(font)
+            .padding(
+                30f.dp(),
+                30f.dp(),
+                30f.dp(),
+                30f.dp(),
+                30f.dp()
+            )
+            .strokeWidth(2).build()
+
+        val drawable2 = BadgeDrawable.Builder()
+            .type(BadgeDrawable.TYPE_WITH_TWO_TEXT_COMPLEMENTARY)
+            .text1("27%")
+            .text2("حمایت شده")
+            .typeFace(font)
+            .padding(
+                30f.dp(),
+                30f.dp(),
+                30f.dp(),
+                30f.dp(),
+                30f.dp()
+            )
+            .strokeWidth(2).build()
+
+        val drawable3 = BadgeDrawable.Builder()
+            .type(BadgeDrawable.TYPE_WITH_TWO_TEXT_COMPLEMENTARY)
+            .text1("95%")
+            .text2("حمایت شده")
+            .typeFace(font)
+            .padding(
+                30f.dp(),
+                30f.dp(),
+                30f.dp(),
+                30f.dp(),
+                30f.dp()
+            )
+            .strokeWidth(2).build()
+
+
+        binding.badge1.text = drawable.toSpannable()
+        binding.badge2.text = drawable2.toSpannable()
+        binding.badge3.text = drawable3.toSpannable()
+
+
+        viewModel += binding.lytFarmer1.clicks().subscribe {
+            EventBus.getDefault().post(EventProfile())
+        }
+        viewModel += binding.lytFarmer2.clicks().subscribe {
+            EventBus.getDefault().post(EventProfile())
+        }
+        viewModel += binding.lytFarmer3.clicks().subscribe {
+            EventBus.getDefault().post(EventProfile())
+        }
+
 
 
     }

@@ -76,12 +76,12 @@
     <string name="str_short_label">Scan</string>
     <string name="str_long_label">Scan</string>
     <string name="Answer">answer</string>
-    <string name="saffron">زعفران</string>
-    <string name="zereshk">زرشک</string>
-    <string name="anab">عناب</string>
-    <string name="honny">عسل</string>
-    <string name="ms">پرفروش ترین کالا ها</string>
-    <string name="sale_in_month">بر اساس میزان فروش در ماه</string>
+    <string name="saffron">Saffron</string>
+    <string name="zereshk">Barberry</string>
+    <string name="anab">Jujube</string>
+    <string name="honny">Honey</string>
+    <string name="ms">Best-selling Goods</string>
+    <string name="sale_in_month">Based on sales per month</string>
 
     <string name="mahsol1">زرشک سحرخیز</string>
     <string name="mahsol2">زعفران سرگل </string>
@@ -89,5 +89,18 @@
     <string name="mahsol4">عناب فله</string>
     <string name="gh1">9000 تومان</string>
 
+    <string name="main_title_project">Title project :</string>
+    <string name="main_about_project">Agriculture ten hectares of jujube</string>
+
+
+    <string name="best_farmer">best_farmers</string>
+    <string name="rate_farmer">Based on rate of farmers</string>
+
+    <string name="farmer1">Golom-Reza Ghasemi </string>
+    <string name="farmer2">Hossein Allahresani</string>
+    <string name="farmer3">Sajjad Ahmadi</string>
+    <string name="ok">حمایت میکنم</string>
+    <string name="middle_lorem_ipsum">aaaa</string>
+    <string name="medium_lorem_ipsum">mle</string>
 
 </resources>

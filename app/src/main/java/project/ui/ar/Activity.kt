@@ -1,5 +1,6 @@
 package project.ui.ar
 
+import android.Manifest
 import android.app.Dialog
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -18,8 +19,11 @@ import project.utils.ar.GLView
 import android.view.ViewGroup
 import android.view.Window
 import com.jakewharton.rxbinding3.view.clicks
+import permissions.dispatcher.NeedsPermission
+import permissions.dispatcher.RuntimePermissions
 import studio.carbonylgroup.textfieldboxes.ExtendedEditText
 
+@RuntimePermissions
 class ARActivity : BaseActivity<ActivityArBinding, ARViewModel>(ActivityArBinding::class.java),
     ARNavigator {
 
@@ -29,19 +33,31 @@ class ARActivity : BaseActivity<ActivityArBinding, ARViewModel>(ActivityArBindin
     @Inject
     override lateinit var viewModel: ARViewModel
 
-    lateinit var glView: GLView
+    private lateinit var glView: GLView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewModel.navigator = this
 
-        glView = GLView(this)
+        showCameraWithPermissionCheck()
 
         if (!Engine.initialize(this, getString(R.string.ar_api_key))) {
             AppLogger.e("HelloAR", "Initialization Failed.");
             Toast.makeText(this, Engine.errorMessage(), Toast.LENGTH_LONG).show();
             return;
         }
+
+
+        viewModel += binding.btnAnswer.clicks().subscribe {
+            openAnswerActivity()
+        }
+
+    }
+
+    @NeedsPermission(Manifest.permission.CAMERA)
+    fun showCamera() {
+
+        glView = GLView(this)
 
         binding.preview.addView(
             glView, ViewGroup.LayoutParams(
@@ -50,11 +66,19 @@ class ARActivity : BaseActivity<ActivityArBinding, ARViewModel>(ActivityArBindin
             )
         )
 
-        viewModel += binding.btnAnswer.clicks().subscribe {
-            openAnswerActivity()
-        }
-
     }
+
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        onRequestPermissionsResult(requestCode, grantResults)
+    }
+
+
 
     override fun openAnswerActivity() {
         val dialog = Dialog(this)
@@ -64,14 +88,15 @@ class ARActivity : BaseActivity<ActivityArBinding, ARViewModel>(ActivityArBindin
         val btn = dialog.findViewById<View>(R.id.bt_try)
         viewModel += btn.clicks().subscribe {
             dialog.dismiss()
-            if (editText.text.toString() == "علی بابا")
-            {
-                Toast.makeText(this, " :) تبریک میگم... شما قاتل بروسلی رو به همین راحتی پیدا کردین " , Toast.LENGTH_LONG).show()
+            if (editText.text.toString() == "علی بابا") {
+                Toast.makeText(
+                    this,
+                    " :) تبریک میگم... شما قاتل بروسلی رو به همین راحتی پیدا کردین ",
+                    Toast.LENGTH_LONG
+                ).show()
                 finish()
-            }
-            else
-            {
-                Toast.makeText(this, "wrong" , Toast.LENGTH_LONG).show()
+            } else {
+                Toast.makeText(this, "wrong", Toast.LENGTH_LONG).show()
             }
         }
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))

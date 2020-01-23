@@ -36,6 +36,7 @@ import project.ui.main.notification.NotificationFragment
 import project.ui.main.setting.SettingFragment
 import project.ui.main.shoppingList.ShoppingListFragment
 import project.ui.map.MapActivity
+import project.ui.profile.ProfileActivity
 import project.utils.*
 import project.utils.navDrawer.MyDrawerItem
 import javax.inject.Inject
@@ -386,6 +387,13 @@ class MainActivity :
         openARActivity()
     }
 
+
+    @Subscribe
+    fun event(event: EventProfile) {
+        openProfileActivity()
+    }
+
+
     override fun openARActivity() {
         launchActivity<ARActivity> {}
         Bungee.fade(this)
@@ -399,6 +407,11 @@ class MainActivity :
 
     override fun openLuckyActivity() {
         launchActivity<LuckyActivity> {}
+        Bungee.fade(this)
+    }
+
+    override fun openProfileActivity() {
+        launchActivity<ProfileActivity> {}
         Bungee.fade(this)
     }
 

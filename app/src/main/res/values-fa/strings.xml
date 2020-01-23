@@ -83,5 +83,16 @@
     <string name="mahsol4">عناب فله</string>
     <string name="gh1">9000 تومان</string>
 
+    <string name="main_title_project">عنوان پروژه:</string>
+    <string name="main_about_project">کشت ده هکتار عناب</string>
+
+    <string name="best_farmer">بهترین کشاورزان</string>
+    <string name="rate_farmer">بر اساس امتیاز کسب شده</string>
+
+    <string name="farmer1">غُلُمرضا قاسمی</string>
+    <string name="farmer2">حسی الله رسانی</string>
+    <string name="farmer3">سجی احمدی</string>
+
+    <string name="ok">حمایت میکنم</string>
 
 </resources>
