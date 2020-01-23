@@ -27,6 +27,7 @@ class HomeFragment :
     override lateinit var viewModel: HomeViewModel
 
 
+
     companion object {
 
         fun newInstance(): HomeFragment {
