@@ -5,8 +5,6 @@ import android.graphics.Canvas
 import android.graphics.Paint
 import android.graphics.Rect
 import android.util.AttributeSet
-import android.widget.TextView
-import android.util.Log
 import ir.sinapp.sarnakh.R
 import project.utils.AppLogger
 
@@ -14,21 +12,21 @@ class AlignedTextView : androidx.appcompat.widget.AppCompatTextView {
     private var alignment = ProperTextAlignment.TOP
     private val textRect = Rect()
 
-    constructor(context: Context?) : this(context, null)
-    constructor(context: Context?, attrs: AttributeSet?) : this(context, attrs, 0)
-    constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
+    constructor(context: Context) : this(context, null)
+    constructor(context: Context, attrs: AttributeSet?) : this(context, attrs, 0)
+    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
         attrs?.let {
-            val typedArray = context?.obtainStyledAttributes(attrs, R.styleable.AlignedTextView, defStyleAttr, 0)
+            val typedArray = context.obtainStyledAttributes(attrs, R.styleable.AlignedTextView, defStyleAttr, 0)
 
-            val alignment = typedArray?.getInt(R.styleable.AlignedTextView_alignment, 0)
-            if (alignment != null && alignment != 0) {
+            val alignment = typedArray.getInt(R.styleable.AlignedTextView_alignment, 0)
+            if (alignment != 0) {
                 setAlignment(alignment)
             } else {
                 AppLogger.e("You did not set an alignment for an AlignedTextView. Default is top alignment.")
             }
 
             invalidate()
-            typedArray?.recycle()
+            typedArray.recycle()
         }
     }
 
@@ -37,7 +35,7 @@ class AlignedTextView : androidx.appcompat.widget.AppCompatTextView {
             canvas.getClipBounds(textRect)
             val cHeight = textRect.height()
             paint.getTextBounds(this.text.toString(), 0, this.text.length, textRect)
-            val bottom = textRect.bottom;
+            val bottom = textRect.bottom
             textRect.offset(-textRect.left, -textRect.top)
             paint.textAlign = Paint.Align.CENTER
             var drawY = 0f

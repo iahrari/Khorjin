@@ -9,10 +9,7 @@ import androidx.multidex.MultiDex
 import androidx.preference.PreferenceManager
 import com.facebook.drawee.backends.pipeline.Fresco
 import com.facebook.stetho.Stetho
-import dagger.android.AndroidInjector
-import dagger.android.DaggerApplication
-import dagger.android.DispatchingAndroidInjector
-import dagger.android.HasActivityInjector
+import dagger.android.*
 import io.github.inflationx.viewpump.ViewPump
 import org.greenrobot.eventbus.EventBus
 import project.data.DataManager
@@ -22,7 +19,7 @@ import project.utils.localization.LocalizationApplicationDelegate
 import javax.inject.Inject
 
 
-class App : DaggerApplication(), HasActivityInjector {
+class App : DaggerApplication(), HasAndroidInjector {
 
 
     @Inject
@@ -115,9 +112,9 @@ class App : DaggerApplication(), HasActivityInjector {
 
 
     @Inject
-    internal lateinit var activityDispatchingAndroidInjector: DispatchingAndroidInjector<Activity>
+    internal lateinit var activityDispatchingAndroidInjector: DispatchingAndroidInjector<Any>
 
-    override fun activityInjector() = activityDispatchingAndroidInjector
+    override fun androidInjector() = activityDispatchingAndroidInjector
 
 
     override fun attachBaseContext(base: Context) {

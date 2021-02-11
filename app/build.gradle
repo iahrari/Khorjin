@@ -9,7 +9,7 @@ apply plugin: 'com.google.firebase.firebase-perf'
 
 android {
     def ext = rootProject.extensions.ext
-    compileSdkVersion ext.android.compileSdk
+    compileSdkVersion 30
 
     defaultConfig {
         minSdkVersion ext.android.minSdk
@@ -51,6 +51,10 @@ android {
     compileOptions {
         targetCompatibility = ext.compiler.java
         sourceCompatibility = ext.compiler.java
+    }
+
+    kotlinOptions {
+        jvmTarget = ext.compiler.java.toString()
     }
 
     applicationVariants.all { variant ->

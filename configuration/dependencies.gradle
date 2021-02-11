@@ -251,7 +251,7 @@ ext {
 
             'com.shawnlin:number-picker:2.4.12',
 
-            "com.mikepenz:materialdrawer:8.3.3",
+            "com.mikepenz:materialdrawer:7.0.0-alpha2",
 //            'com.mikepenz:google-material-typeface:3.0.1.1.original@aar',
 //            'com.mikepenz:fontawesome-typeface:5.0.6.0@aar',
 //            'com.mikepenz:octicons-typeface:3.0.0.1@aar',

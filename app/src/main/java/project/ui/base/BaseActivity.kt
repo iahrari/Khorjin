@@ -224,7 +224,7 @@ abstract class BaseActivity<T : ViewDataBinding, V : BaseViewModel<*>>(private v
     protected fun setLanguage(language: String, activity: AppCompatActivity) {
         CommonUtils.updateLanguage(Locale(language), this)
         localizationActivityDelegate.setLanguage(this, language)
-        LanguageUtils.applyLanguage(Locale(language), activity.javaClass.name)
+        LanguageUtils.applyLanguage(Locale(language), true)
         Bungee.fade(this)
         AppLogger.i("change lang to fa")
     }
