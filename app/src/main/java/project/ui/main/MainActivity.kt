@@ -23,7 +23,6 @@ import io.github.inflationx.calligraphy3.CalligraphyUtils
 import ir.sinapp.sarnakh.BR
 import ir.sinapp.sarnakh.R
 import ir.sinapp.sarnakh.databinding.ActivityMainBinding
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.runBlocking
 import org.greenrobot.eventbus.Subscribe
 import project.ui.ar.ARActivity

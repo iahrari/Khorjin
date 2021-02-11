@@ -10,7 +10,6 @@ import ir.sinapp.sarnakh.BR
 import ir.sinapp.sarnakh.R
 import ir.sinapp.sarnakh.databinding.ActivityLuckyBinding
 import ir.sinapp.sarnakh.databinding.DialogGiftBinding
-import kotlinx.android.synthetic.main.activity_lucky.*
 import project.utils.AppLogger
 import project.utils.lucky.model.LuckyItem
 import java.util.*
@@ -113,16 +112,16 @@ class LuckyActivity : BaseActivity<ActivityLuckyBinding, LuckyViewModel>(Activit
 
         /////////////////////
 
-        lucky_wheel.setData(data)
-        lucky_wheel.setRound(5)
+        binding.luckyWheel.setData(data)
+        binding.luckyWheel.setRound(5)
 
         viewModel += binding.play.clicks().subscribe {
             val index = getRandomIndex(data)
-            lucky_wheel.startLuckyWheelWithTargetIndex(index)
+            binding.luckyWheel.startLuckyWheelWithTargetIndex(index)
         }
 
-        lucky_wheel.isTouchEnabled = false
-        lucky_wheel.setLuckyRoundItemSelectedListener {
+        binding.luckyWheel.isTouchEnabled = false
+        binding.luckyWheel.setLuckyRoundItemSelectedListener {
             showDialogProductBlue()
         }
 
