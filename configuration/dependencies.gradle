@@ -125,7 +125,9 @@ ext {
 
             'com.google.android.gms:play-services-maps:17.0.0',
             'com.google.maps.android:android-maps-utils:2.2.0',
-            'com.google.android.gms:play-services-location:17.1.0'
+            'com.google.android.gms:play-services-location:17.1.0',
+            "com.google.guava:guava:26.0-android",
+            'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava'
     ]
 
 
@@ -197,18 +199,18 @@ ext {
             "org.greenrobot:eventbus:$eventBus"
     ]
 
-    rxBinding = "4.0.0"
+    rxBinding = "3.0.0"
     RxBinding = [
-            "com.jakewharton.rxbinding4:rxbinding:$rxBinding",
-            "com.jakewharton.rxbinding4:rxbinding-core:$rxBinding",
-            "com.jakewharton.rxbinding4:rxbinding-appcompat:$rxBinding",
-            "com.jakewharton.rxbinding4:rxbinding-drawerlayout:$rxBinding",
-            "com.jakewharton.rxbinding4:rxbinding-leanback:$rxBinding",
-            "com.jakewharton.rxbinding4:rxbinding-recyclerview:$rxBinding",
-            "com.jakewharton.rxbinding4:rxbinding-slidingpanelayout:$rxBinding",
-            "com.jakewharton.rxbinding4:rxbinding-swiperefreshlayout:$rxBinding",
-            "com.jakewharton.rxbinding4:rxbinding-viewpager:$rxBinding",
-            "com.jakewharton.rxbinding4:rxbinding-material:$rxBinding"
+            "com.jakewharton.rxbinding3:rxbinding:$rxBinding",
+            "com.jakewharton.rxbinding3:rxbinding-core:$rxBinding",
+            "com.jakewharton.rxbinding3:rxbinding-appcompat:$rxBinding",
+            "com.jakewharton.rxbinding3:rxbinding-drawerlayout:$rxBinding",
+            "com.jakewharton.rxbinding3:rxbinding-leanback:$rxBinding",
+            "com.jakewharton.rxbinding3:rxbinding-recyclerview:$rxBinding",
+            "com.jakewharton.rxbinding3:rxbinding-slidingpanelayout:$rxBinding",
+            "com.jakewharton.rxbinding3:rxbinding-swiperefreshlayout:$rxBinding",
+            "com.jakewharton.rxbinding3:rxbinding-viewpager:$rxBinding",
+            "com.jakewharton.rxbinding3:rxbinding-material:$rxBinding"
     ]
 
     preferenceHolder = "1.51"
