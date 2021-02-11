@@ -53,6 +53,10 @@ android {
         sourceCompatibility = ext.compiler.java
     }
 
+    applicationVariants.all { variant ->
+        variant.getRuntimeConfiguration().exclude group: 'org.jetbrains.kotlin', module: 'kotlin-reflect'
+    }
+
 }
 
 kapt {
