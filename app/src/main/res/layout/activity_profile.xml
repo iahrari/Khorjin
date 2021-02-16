@@ -157,7 +157,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="125"
+                                    android:text="۱۲"
                                     android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
                                     android:textColor="@color/grey_90"
                                     android:textStyle="bold" />
@@ -166,7 +166,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="@dimen/spacing_small"
-                                    android:text="Posts"
+                                    android:text="تعداد طرح‌ها"
                                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                                     android:textColor="@color/grey_40" />
 
