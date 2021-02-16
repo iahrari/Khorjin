@@ -272,7 +272,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="۵۰ میلیون تومان"
+                                android:text="۵ میلیون تومان"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
                                 android:textColor="@color/green_700" />
 
@@ -435,7 +435,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="۵۳ میلیون تومان"
+                    android:text="۸ میلیون تومان"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/grey_90"
                     app:fontFamily="sans-serif-black" />
@@ -465,7 +465,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="۶۳ میلیون و ۶۰۰ هزار تومان"
+                    android:text="۹ میلیون و ۶۰۰ هزار تومان"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/green_A400"
                     app:fontFamily="sans-serif-black" />
