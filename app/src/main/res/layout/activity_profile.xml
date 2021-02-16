@@ -466,7 +466,7 @@
                                     android:layout_width="@dimen/spacing_xlarge"
                                     android:layout_height="@dimen/spacing_xlarge"
                                     android:foreground="@color/overlay_light_20"
-                                    android:src="@drawable/photo_female_1"
+                                    android:src="@drawable/img_main_farmer5"
                                     app:civ_border="false"
                                     app:civ_shadow="true"
                                     app:civ_shadow_radius="0dp" />
