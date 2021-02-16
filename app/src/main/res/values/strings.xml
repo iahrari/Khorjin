@@ -113,5 +113,6 @@
     <string name="ok">حمایت میکنم</string>
     <string name="total">Total Amount</string>
     <string name="checkout">CHECKOUT</string>
+    <string name="next_button">next</string>
 
 </resources>
