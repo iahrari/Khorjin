@@ -5,13 +5,16 @@ import android.os.Bundle
 import android.text.SpannableString
 import android.text.TextUtils
 import android.view.View
+import androidx.fragment.app.commitNow
 import cn.nekocode.badge.BadgeDrawable
 import com.jakewharton.rxbinding3.view.clicks
 import ir.sinapp.sarnakh.BR
+import ir.sinapp.sarnakh.R
 import ir.sinapp.sarnakh.databinding.FragmentHomeBinding
 import org.greenrobot.eventbus.EventBus
 import project.adapter.DetailSliderAdapter
 import project.ui.base.BaseFragment
+import project.ui.main.shoppingList.ShoppingListFragment
 import project.utils.*
 import project.utils.widget.toolbar.Dp
 import project.utils.widget.toolbar.Px
@@ -57,7 +60,7 @@ class HomeFragment :
             EventBus.getDefault().post(EventWheel())
         }
 
-        val font = CommonUtils.typefaceFromAsset("fonts/IRANYekanMobileBold.ttf", context!!)
+        val font = CommonUtils.typefaceFromAsset("fonts/IRANYekanMobileBold.ttf", requireContext())
 
         val drawable = BadgeDrawable.Builder()
             .type(BadgeDrawable.TYPE_WITH_TWO_TEXT_COMPLEMENTARY)
@@ -121,6 +124,12 @@ class HomeFragment :
 
     override fun openDetail() {
         EventBus.getDefault().post(EventDetail())
+    }
+
+    override fun openShoppingList(v: View) {
+        requireActivity().supportFragmentManager.commitNow {
+            replace(R.id.fragment, ShoppingListFragment.newInstance())
+        }
     }
 
 }

@@ -14,6 +14,8 @@ class ShoppingListViewModel(dataManager: DataManager, schedulerProvider: Schedul
     val i2 = ObservableInt(1)
     val i3 = ObservableInt(1)
 
+    val sum = ObservableInt(27000)
+
     fun value(x: Int): String {
         return when (x) {
             1 -> i1.get().toString()
@@ -24,6 +26,7 @@ class ShoppingListViewModel(dataManager: DataManager, schedulerProvider: Schedul
     }
 
     fun onAdd(x: Int) {
+        sum.set(sum.get() + 9000)
         when (x) {
             1 -> i1.set(i1.get()+1)
             2 -> i2.set(i2.get()+1)
@@ -32,21 +35,28 @@ class ShoppingListViewModel(dataManager: DataManager, schedulerProvider: Schedul
     }
 
     fun onSub(x: Int) {
+
         when (x) {
             1 -> {
-                val a = i1.get()-1
-                if (a >= 1)
+                val a = i1.get() - 1
+                if (a >= 1) {
+                    sum.set(sum.get() - 9000)
                     i1.set(a)
+                }
             }
             2 -> {
-                val a = i2.get()-1
-                if (a >= 1)
+                val a = i2.get() - 1
+                if (a >= 1) {
+                    sum.set(sum.get() - 9000)
                     i2.set(a)
+                }
             }
             3 -> {
-                val a = i3.get()-1
-                if (a >= 1)
+                val a = i3.get() - 1
+                if (a >= 1) {
+                    sum.set(sum.get() - 9000)
                     i3.set(a)
+                }
             }
         }
     }

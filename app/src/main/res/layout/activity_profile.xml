@@ -75,7 +75,7 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_margin="@dimen/spacing_xsmall"
-                    android:src="@drawable/img_main_farmer4"
+                    android:src="@drawable/img_main_farmer7"
                     app:civ_border="true"
                     app:civ_border_color="@android:color/white"
                     app:civ_border_width="2dp"
@@ -262,41 +262,85 @@
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="70dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/spacing_middle"
-                            android:orientation="horizontal">
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp">
+                                <ImageView
+                                    android:id="@+id/image_1"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:src="@drawable/detail_reward1"
+                                    android:scaleType="fitCenter"
+                                    android:layout_gravity="start"/>
+<!--                                l,l,-->
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="نشان طلایی زعفران"
+                                    android:textColor="@color/black"
+                                    android:layout_gravity="center|center_horizontal"
+                                    android:fontFamily="sans-serif-black"/>
+                            </LinearLayout>
 
-                            <ImageView
-                                android:id="@+id/image_1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:src="@drawable/detail_reward1"
-                                android:scaleType="fitCenter" />
 
                             <View
-                                android:layout_width="@dimen/spacing_middle"
-                                android:layout_height="0dp" />
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/grey_10" />
 
-                            <ImageView
-                                android:id="@+id/image_2"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:src="@drawable/detail_reward2"
-                                android:scaleType="fitCenter" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp">
+                                <ImageView
+                                    android:id="@+id/image_2"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:src="@drawable/detail_reward2"
+                                    android:scaleType="fitCenter"
+                                    android:layout_gravity="start"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="کشاورز نمونه استان"
+                                    android:textColor="@color/black"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="sans-serif-black"/>
+                            </LinearLayout>
 
                             <View
-                                android:layout_width="@dimen/spacing_middle"
-                                android:layout_height="0dp" />
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/grey_10" />
 
-                            <ImageView
-                                android:id="@+id/image_3"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:src="@drawable/detail_reward3"
-                                android:scaleType="fitCenter"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp">
+                                <ImageView
+                                    android:id="@+id/image_3"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:src="@drawable/detail_reward3"
+                                    android:scaleType="fitCenter"
+                                    android:layout_gravity="start"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="بالاترین درجه کیفیت محصول زعفران"
+                                    android:textColor="@color/black"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="sans-serif-black"/>
+                            </LinearLayout>
+
+
 
                         </LinearLayout>
 

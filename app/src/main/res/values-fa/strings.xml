@@ -43,7 +43,7 @@
     <string name="class_name">نام کلاس</string>
     <string name="description">توضیحات</string>
     <string name="create">ساخت</string>
-    <string name="app_name" translatable="false">سرنخ</string>
+    <string name="app_name" translatable="false">خورجین</string>
     <string name="classes">کلاس ها</string>
     <string name="connected">متصل</string>
     <string name="disconnected">در انتظار شبکه …</string>
@@ -80,16 +80,16 @@
     <string name="sale_in_month">بر اساس میزان فروش در ماه</string>
 
     <string name="mahsol1">زرشک سحرخیز</string>
-    <string name="mahsol2">زعفران سرگل </string>
+    <string name="mahsol2">زعفران سرگل سحرخیز</string>
     <string name="mahsol3">عسل گون اورازان</string>
     <string name="mahsol4">عناب فله</string>
     <string name="gh1">9000 تومان</string>
 
     <string name="main_title_project">عنوان طرح:</string>
-    <string name="main_about_project">کاشت ده هکتار عناب</string>
-    <string name="main_about_project2">کاشت ده هکتار عناب</string>
-    <string name="main_about_project3">مکانیزه سازی برداشت زرشک</string>
-    <string name="main_about_project4">قطره ای کردن آبیاری زمین</string>
+    <string name="main_about_project">کاشت سه هکتار زعفران</string>
+    <string name="main_about_project2">ایجاد سیستم آبیاری قطره‌ای</string>
+    <string name="main_about_project3">بسته‌بندی زعفران</string>
+    <string name="main_about_project4">مکانیزه‌کردن برداشت</string>
     <string name="main_about_project5">کاشت ده هکتار عناب</string>
 
 

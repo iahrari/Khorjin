@@ -1119,61 +1119,6 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
 
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="@dimen/spacing_medium"
-                                android:elevation="2dp"
-                                app:cardCornerRadius="10dp">
-
-                                <com.balysv.materialripple.MaterialRippleLayout
-                                    style="@style/RippleStyleBlack"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent">
-
-                                    <LinearLayout
-                                        android:onClick="@{()->viewModel.detail()}"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:orientation="vertical">
-
-                                        <com.facebook.drawee.view.SimpleDraweeView
-                                            android:layout_width="160dp"
-                                            android:layout_height="120dp"
-                                            android:padding="20dp"
-                                            app:actualImageScaleType="fitCenter"
-                                            app:actualImageResource="@drawable/mahsol1" />
-
-                                        <androidx.appcompat.widget.AppCompatTextView
-                                            asyncText='@{@string/mahsol1}'
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginStart="@dimen/spacing_middle"
-                                            android:layout_marginTop="@dimen/spacing_medium"
-                                            android:layout_marginEnd="@dimen/spacing_medium"
-                                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                                            android:textColor="@color/red_300"
-                                            app:fontFamily="sans-serif-medium"
-                                            tools:text="@string/mahsol1" />
-
-                                        <androidx.appcompat.widget.AppCompatTextView
-                                            asyncText='@{@string/gh1}'
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_gravity="end"
-                                            android:layout_marginStart="@dimen/spacing_middle"
-                                            android:layout_marginTop="@dimen/spacing_small"
-                                            android:layout_marginEnd="@dimen/spacing_middle"
-                                            android:layout_marginBottom="@dimen/spacing_xmedium"
-                                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                                            android:textColor="@color/grey_40"
-                                            tools:text="@string/gh1" />
-
-                                    </LinearLayout>
-
-                                </com.balysv.materialripple.MaterialRippleLayout>
-
-                            </androidx.cardview.widget.CardView>
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
@@ -1223,6 +1168,62 @@
                                             android:textColor="@color/grey_40"
                                             tools:text="@string/gh1" />
 
+
+                                    </LinearLayout>
+
+                                </com.balysv.materialripple.MaterialRippleLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/spacing_medium"
+                                android:elevation="2dp"
+                                app:cardCornerRadius="10dp">
+
+                                <com.balysv.materialripple.MaterialRippleLayout
+                                    style="@style/RippleStyleBlack"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <LinearLayout
+                                        android:onClick="@{()->viewModel.detail()}"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                        <com.facebook.drawee.view.SimpleDraweeView
+                                            android:layout_width="160dp"
+                                            android:layout_height="120dp"
+                                            android:padding="20dp"
+                                            app:actualImageScaleType="fitCenter"
+                                            app:actualImageResource="@drawable/mahsol1" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            asyncText='@{@string/mahsol1}'
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="@dimen/spacing_middle"
+                                            android:layout_marginTop="@dimen/spacing_medium"
+                                            android:layout_marginEnd="@dimen/spacing_medium"
+                                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                            android:textColor="@color/red_300"
+                                            app:fontFamily="sans-serif-medium"
+                                            tools:text="@string/mahsol1" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            asyncText='@{@string/gh1}'
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="end"
+                                            android:layout_marginStart="@dimen/spacing_middle"
+                                            android:layout_marginTop="@dimen/spacing_small"
+                                            android:layout_marginEnd="@dimen/spacing_middle"
+                                            android:layout_marginBottom="@dimen/spacing_xmedium"
+                                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                            android:textColor="@color/grey_40"
+                                            tools:text="@string/gh1" />
 
                                     </LinearLayout>
 
@@ -1629,58 +1630,6 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
 
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="@dimen/spacing_medium"
-                                android:elevation="2dp"
-                                app:cardCornerRadius="10dp">
-
-                                <com.balysv.materialripple.MaterialRippleLayout
-                                    style="@style/RippleStyleBlack"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent">
-
-                                    <LinearLayout
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:orientation="vertical">
-
-                                        <com.facebook.drawee.view.SimpleDraweeView
-                                            android:layout_width="160dp"
-                                            android:layout_height="120dp"
-                                            android:padding="20dp"
-                                            app:actualImageScaleType="fitCenter"
-                                            app:actualImageResource="@drawable/mahsol3" />
-
-                                        <androidx.appcompat.widget.AppCompatTextView
-                                            asyncText='@{@string/mahsol3}'
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginStart="@dimen/spacing_middle"                                            android:layout_marginTop="@dimen/spacing_medium"
-                                            android:layout_marginEnd="@dimen/spacing_medium"
-                                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                                            android:textColor="@color/red_300"
-                                            app:fontFamily="sans-serif-medium"
-                                            tools:text="@string/mahsol3" />
-
-                                        <androidx.appcompat.widget.AppCompatTextView
-                                            asyncText='@{@string/gh1}'
-                                            android:layout_gravity="end"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginStart="@dimen/spacing_middle"                                            android:layout_marginTop="@dimen/spacing_small"
-                                            android:layout_marginEnd="@dimen/spacing_medium"
-                                            android:layout_marginBottom="@dimen/spacing_xmedium"
-                                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                                            android:textColor="@color/grey_40"
-                                            tools:text="@string/gh1" />
-
-                                    </LinearLayout>
-
-                                </com.balysv.materialripple.MaterialRippleLayout>
-
-                            </androidx.cardview.widget.CardView>
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
@@ -1729,6 +1678,60 @@
                                             android:textColor="@color/grey_40"
                                             tools:text="@string/gh1" />
 
+
+                                    </LinearLayout>
+
+                                </com.balysv.materialripple.MaterialRippleLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/spacing_medium"
+                                android:elevation="2dp"
+                                app:cardCornerRadius="10dp">
+
+                                <com.balysv.materialripple.MaterialRippleLayout
+                                    style="@style/RippleStyleBlack"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                        <com.facebook.drawee.view.SimpleDraweeView
+                                            android:layout_width="160dp"
+                                            android:layout_height="120dp"
+                                            android:padding="20dp"
+                                            app:actualImageScaleType="fitCenter"
+                                            app:actualImageResource="@drawable/mahsol3" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            asyncText='@{@string/mahsol3}'
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="@dimen/spacing_middle"                                            android:layout_marginTop="@dimen/spacing_medium"
+                                            android:layout_marginEnd="@dimen/spacing_medium"
+                                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                            android:textColor="@color/red_300"
+                                            app:fontFamily="sans-serif-medium"
+                                            tools:text="@string/mahsol3" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            asyncText='@{@string/gh1}'
+                                            android:layout_gravity="end"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="@dimen/spacing_middle"                                            android:layout_marginTop="@dimen/spacing_small"
+                                            android:layout_marginEnd="@dimen/spacing_medium"
+                                            android:layout_marginBottom="@dimen/spacing_xmedium"
+                                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                            android:textColor="@color/grey_40"
+                                            tools:text="@string/gh1" />
 
                                     </LinearLayout>
 
