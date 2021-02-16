@@ -114,5 +114,6 @@
     <string name="total">Total Amount</string>
     <string name="checkout">CHECKOUT</string>
     <string name="next_button">next</string>
+    <string name="long_lorem_ipsum" translatable="false">زرشک میوه سالمی است که سرشار از مواد مغذی بالاست...</string>
 
 </resources>
