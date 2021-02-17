@@ -558,7 +558,7 @@
                                             tools:text="@string/main_title_project" />
 
                                         <androidx.appcompat.widget.AppCompatTextView
-                                            asyncText='@{@string/main_about_project}'
+                                            asyncText='@{@string/main_about_project2}'
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_marginStart="@dimen/spacing_middle"
@@ -674,7 +674,7 @@
                                             tools:text="@string/main_title_project" />
 
                                         <androidx.appcompat.widget.AppCompatTextView
-                                            asyncText='@{@string/main_about_project}'
+                                            asyncText='@{@string/main_about_project3}'
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_marginStart="@dimen/spacing_middle"
@@ -789,7 +789,7 @@
                                             tools:text="@string/main_title_project" />
 
                                         <androidx.appcompat.widget.AppCompatTextView
-                                            asyncText='@{@string/main_about_project}'
+                                            asyncText='@{@string/main_about_project4}'
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_marginStart="@dimen/spacing_middle"
@@ -905,7 +905,7 @@
                                             tools:text="@string/main_title_project" />
 
                                         <androidx.appcompat.widget.AppCompatTextView
-                                            asyncText='@{@string/main_about_project}'
+                                            asyncText='@{@string/main_about_project5}'
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_marginStart="@dimen/spacing_middle"
@@ -1021,7 +1021,7 @@
                                             tools:text="@string/main_title_project" />
 
                                         <androidx.appcompat.widget.AppCompatTextView
-                                            asyncText='@{@string/main_about_project}'
+                                            asyncText='@{@string/main_about_project2}'
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_marginStart="@dimen/spacing_middle"
